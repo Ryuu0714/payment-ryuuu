@@ -10,78 +10,89 @@
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
-      padding: 40px;
-      font-size: 18px;
+      padding: 50px 20px;
+      font-size: 22px;
     }
     h1 {
       color: #00f2fe;
-      font-size: 32px;
+      font-size: 36px;
+      margin-bottom: 30px;
     }
     .box {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      padding: 28px;
-      margin: 25px auto;
-      width: 95%;
-      max-width: 480px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
     label {
       display: block;
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 14px;
+      font-weight: bold;
     }
     input {
       width: 100%;
-      padding: 14px;
-      font-size: 18px;
-      border-radius: 10px;
+      padding: 18px;
+      font-size: 22px;
+      border-radius: 12px;
       border: none;
       text-align: center;
+      margin-bottom: 10px;
     }
     button {
       width: 100%;
       background: #00f2fe;
       border: none;
-      border-radius: 10px;
-      padding: 14px;
+      border-radius: 12px;
+      padding: 16px;
       color: black;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
       cursor: pointer;
-      margin-top: 12px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #00c3d4;
     }
     .contact-box {
-      margin-top: 40px;
-      padding: 24px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
+      margin-top: 50px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
     }
     .contact-box h3 {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 20px;
     }
     .contact-box a {
       display: block;
       color: #00f2fe;
       text-decoration: none;
-      margin: 12px 0;
-      font-size: 18px;
+      margin: 14px 0;
+      font-size: 22px;
       font-weight: bold;
     }
     a.back {
       display: inline-block;
-      margin-top: 35px;
+      margin-top: 40px;
       color: #00f2fe;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
     }
     img.qris {
-      width: 320px;
-      max-width: 100%;
-      margin-top: 14px;
-      border-radius: 14px;
-      border: 2px solid #00f2fe;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 16px;
+      border: 3px solid #00f2fe;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -98,19 +109,19 @@
   <div class="box">
     <label for="dana">DANA</label>
     <input id="dana" value="085624470189" readonly>
-    <button onclick="copyToClipboard('dana')">Salin Nomor DANA</button>
+    <button onclick="copyToClipboard('dana')">📋 Salin Nomor DANA</button>
   </div>
 
   <div class="box">
     <label for="gopay">GoPay</label>
     <input id="gopay" value="085624470189" readonly>
-    <button onclick="copyToClipboard('gopay')">Salin Nomor GoPay</button>
+    <button onclick="copyToClipboard('gopay')">📋 Salin Nomor GoPay</button>
   </div>
 
   <div class="box">
     <label for="ovo">OVO</label>
     <input id="ovo" value="085624470189" readonly>
-    <button onclick="copyToClipboard('ovo')">Salin Nomor OVO</button>
+    <button onclick="copyToClipboard('ovo')">📋 Salin Nomor OVO</button>
   </div>
 
   <div class="contact-box">
