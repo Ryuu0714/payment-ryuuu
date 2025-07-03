@@ -3,86 +3,93 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Metode Pembayaran</title>
+  <title>Ryuu Store</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      font-family: sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .container {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 20px;
-      max-width: 400px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .qr {
-      border-radius: 10px;
-      margin: 20px 0;
-      background: white;
-      padding: 10px;
-    }
-    a.btn {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      font-weight: bold;
-      background-color: #00f2fe;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
+      padding: 30px;
     }
     h1 {
       color: #00f2fe;
     }
-    p.note {
-      font-size: 14px;
-      color: #ddd;
+    .wallet-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
     }
-    .ewallet {
-      background: #ffffff0a;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      text-align: left;
-      font-size: 15px;
-      line-height: 1.6;
+    label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
     }
-    .ewallet strong {
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      background: #00f2fe;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
       color: #00f2fe;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Payment Methods</h1>
-    <p>Silahkan pilih salah satu metode pembayaran di bawah ini</p>
+  <h1>Metode E-Wallet</h1>
 
-    <div class="qr">
-      <img src="qris.png" alt="QRIS" width="250">
-      <p><strong>RYUU STORE</strong><br>ID102xxxxx9269</p>
-    </div>
+  <div class="wallet-box">
+    <label for="dana">DANA</label>
+    <input id="dana" value="085624470189" readonly>
+    <button onclick="copyToClipboard('dana')">Salin Nomor DANA</button>
+  </div>
 
-    <p class="note">Scan Kode QR di Atas Jika Kamu Bukan Pengguna Premium😊<br><strong>WAJIB SS BUKTI TRANSFER!!</strong></p>
+  <div class="wallet-box">
+    <label for="gopay">GoPay</label>
+    <input id="gopay" value="085624470189" readonly>
+    <button onclick="copyToClipboard('gopay')">Salin Nomor GoPay</button>
+  </div>
 
-    <div class="ewallet">
-      <p><strong>▶ E-WALLET</strong><br><br>
-      DANA: 085624470189<br>
-      GOPAY: 085624470189<br>
-      <strong>NOTE:</strong> WAJIB SS BUKTI TRANSFER!!
-      </p>
-    </div>
+  <div class="wallet-box">
+    <label for="ovo">OVO</label>
+    <input id="ovo" value="085624470189" readonly>
+    <button onclick="copyToClipboard('ovo')">Salin Nomor OVO</button>
+  </div>
 
+  <a href="payment.html">⬅ Kembali ke Halaman Utama</a>
+
+  <script>
+    function copyToClipboard(id) {
+      var copyText = document.getElementById(id);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // untuk Android
+      document.execCommand("copy");
+      alert("Nomor berhasil disalin: " + copyText.value);
+    }
+  </script>
+</body>
+</html
     <a href="GADA JIRRR" class="btn">▶ TRANSFER BANK</a>
     <a href="https://wa.me/6285624470189" class="btn">WhatsApp</a>
     <a href="index.html" class="btn">Web Utama</a>
