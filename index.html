@@ -12,12 +12,61 @@
       box-sizing: border-box;
     }
 
-    body {
+    body, html {
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* === Loading Screen === */
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #0f2027;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    .loader img {
+      width: 120px;
+      height: auto;
+      animation: pulse 2s infinite;
+    }
+
+    .loader p {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #00f2fe;
+      letter-spacing: 1px;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* === Background Website === */
+    body {
       background: url('ryuu-bg.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      min-height: 100vh;
       position: relative;
       overflow: hidden;
     }
@@ -32,6 +81,7 @@
       z-index: 0;
     }
 
+    /* === Konten Website === */
     .container {
       position: relative;
       z-index: 1;
@@ -44,6 +94,9 @@
       margin: 100px auto;
       text-align: center;
       animation: fadeInUp 1.2s ease;
+      opacity: 0;
+      animation-delay: 2.5s;
+      animation-fill-mode: forwards;
     }
 
     h1 {
@@ -93,6 +146,13 @@
 </head>
 <body>
 
+  <!-- 🌀 Loading Screen -->
+  <div class="loader">
+    <img src="ryuu-bg.png" alt="Killua Logo" />
+    <p>Loading...</p>
+  </div>
+
+  <!-- 🧾 Konten Utama -->
   <div class="container">
     <h1>Hii, I'm Ryuu Store</h1>
     <p>Website Payment Ryuu</p>
