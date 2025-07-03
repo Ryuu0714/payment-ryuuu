@@ -47,7 +47,20 @@
       cursor: pointer;
       margin-top: 10px;
     }
-    a {
+    .contact-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+    .contact-box a {
+      display: block;
+      color: #00f2fe;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    a.back {
       display: inline-block;
       margin-top: 30px;
       color: #00f2fe;
@@ -77,25 +90,23 @@
     <button onclick="copyToClipboard('ovo')">Salin Nomor OVO</button>
   </div>
 
-  <a href="payment.html">⬅ Kembali ke Halaman Utama</a>
+  <div class="contact-box">
+    <h3>Hubungi Kami</h3>
+    <a href="https://wa.me/6285624470189" target="_blank">📞 WhatsApp: 085624470189</a>
+    <a href="https://t.me/RyuuVL" target="_blank">📨 Telegram: @RyuuVL</a>
+    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank">📣 Testimoni&Saluran WhatsApp</a>
+  </div>
+
+  <a href="index.html" class="back">⬅ Kembali ke Halaman Utama</a>
 
   <script>
     function copyToClipboard(id) {
       var copyText = document.getElementById(id);
       copyText.select();
-      copyText.setSelectionRange(0, 99999); // untuk Android
+      copyText.setSelectionRange(0, 99999);
       document.execCommand("copy");
       alert("Nomor berhasil disalin: " + copyText.value);
     }
   </script>
-</body>
-</html
-    <a href="GADA JIRRR" class="btn">▶ TRANSFER BANK</a>
-    <a href="https://wa.me/6285624470189" class="btn">WhatsApp</a>
-    <a href="index.html" class="btn">Web Utama</a>
-    <a href="https://t.me/RyuuVL" class="btn">Telegram</a>
-    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" class="btn">Saluran&Testimoni</a>
-    <a href="index.html" class="btn">Back</a>
-  </div>
 </body>
 </html>
