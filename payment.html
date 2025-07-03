@@ -1,9 +1,9 @@
 
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryuu Store</title>
   <style>
     body {
@@ -12,7 +12,6 @@
       color: white;
       text-align: center;
       padding: 30px;
-      box-sizing: border-box;
     }
     h1 {
       color: #00f2fe;
@@ -49,16 +48,31 @@
       cursor: pointer;
       margin-top: 10px;
     }
-    <img src="qris.png" alt="QRIS" style="width: 180px; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onclick="this.style.transform='scale(0.95)'">
-    button:active {
-      transform: scale(0.97);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
     .contact-box {
       margin-top: 30px;
-      font-size: 14px;
-      opacity: 0.8;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+    .contact-box a {
+      display: block;
+      color: #00f2fe;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #00f2fe;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    img.qris {
+      width: 250px;
+      margin-top: 10px;
+      border-radius: 12px;
+      border: 2px solid #00f2fe;
     }
   </style>
 </head>
@@ -78,8 +92,6 @@
     <label for="dana">DANA</label>
     <input id="dana" value="085624470189" readonly>
     <button onclick="copyToClipboard('dana')">Salin Nomor DANA</button>
-      <img src="qris.png" alt="QRIS">
-    </div>
   </div>
 
   <!-- ✅ GoPay -->
@@ -87,8 +99,6 @@
     <label for="gopay">GoPay</label>
     <input id="gopay" value="085624470189" readonly>
     <button onclick="copyToClipboard('gopay')">Salin Nomor GoPay</button>
-      <img src="qris.png" alt="QRIS">
-    </div>
   </div>
 
   <!-- ✅ OVO -->
@@ -96,8 +106,6 @@
     <label for="ovo">OVO</label>
     <input id="ovo" value="085624470189" readonly>
     <button onclick="copyToClipboard('ovo')">Salin Nomor OVO</button>
-      <img src="qris.png" alt="QRIS">
-    </div>
   </div>
 
   <!-- ✅ Kontak -->
