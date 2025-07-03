@@ -6,8 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryuu Payment</title>
   <style>
-    body {
+    /* RESET */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
       color: white;
@@ -18,8 +24,44 @@
       min-height: 100vh;
       text-align: center;
       padding: 20px;
+      overflow: hidden;
     }
+
+    /* LOADING SCREEN */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #0f2027;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease-out 1s forwards;
+    }
+
+    #loader span {
+      font-size: 2em;
+      color: #00f2fe;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @keyframes blink {
+      50% { opacity: 0.4; }
+    }
+
+    /* CONTAINER */
     .container {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out 1.2s forwards;
       background-color: rgba(255, 255, 255, 0.05);
       padding: 40px;
       border-radius: 20px;
@@ -27,13 +69,25 @@
       width: 100%;
       max-width: 500px;
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     h1 {
       font-size: 2.5em;
       color: #00f2fe;
+      margin-bottom: 10px;
     }
+
     p {
       font-size: 1.2em;
+      margin-bottom: 10px;
     }
+
     a.button {
       display: inline-block;
       margin-top: 20px;
@@ -43,14 +97,44 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    a.button:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2) inset;
+    }
+
+    a.button:hover {
+      background-color: #00d4e0;
+      box-shadow: 0 0 10px #00f2fe;
     }
   </style>
 </head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <span>Loading...</span>
+  </div>
+
+  <!-- MAIN CONTENT -->
   <div class="container">
     <h1>Hello, I'm Ryuu Store</h1>
     <p>Website Payment Ryuu</p>
     <p>Selamat Datang di Website Payment Ryuu Official</p>
     <a class="button" href="payment.html">Go to Payment</a>
   </div>
+
+  <script>
+    // Remove loader after animation done
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+
 </body>
 </html>
