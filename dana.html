@@ -27,44 +27,39 @@
     }
 
     .box {
-      background: rgba(0, 0, 0, 0.4); /* Lebih gelap dan transparan */
-      backdrop-filter: blur(5px);     /* Blur ringan agar wajah tetap terlihat */
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 35px 30px;
-      border-radius: 20px;
-      max-width: 420px;
+      background: rgba(0, 0, 0, 0.25); /* ringan banget */
+      padding: 30px 25px;
+      border-radius: 16px;
+      max-width: 400px;
       margin: auto;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
-      transition: all 0.3s ease;
-    }
-
-    .box:hover {
-      box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
     }
 
     h2 {
       margin-bottom: 20px;
+      font-size: 1.8em;
       color: #00f2fe;
-      text-shadow: 0 0 8px #00f2fe;
+      text-shadow: 0 0 10px #00f2fe;
     }
 
     input {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       font-size: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 15px;
       border: none;
       border-radius: 8px;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.85);
-      color: #333;
+      background: rgba(255, 255, 255, 0.85);
+      color: #222;
       font-weight: bold;
     }
 
     button, a.back {
       display: inline-block;
       margin-top: 10px;
-      padding: 14px 28px;
+      padding: 12px 28px;
       background: #00f2fe;
       color: black;
       font-weight: bold;
@@ -72,13 +67,12 @@
       border-radius: 10px;
       text-decoration: none;
       cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 0 10px #00f2fe;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px #00f2fe;
     }
 
     button:hover, a.back:hover {
       background: #00c9de;
-      box-shadow: 0 0 20px #00f2fe;
       transform: scale(1.05);
     }
 
@@ -88,11 +82,10 @@
     }
 
     .credit {
-      margin-top: 40px;
+      margin-top: 35px;
       font-size: 0.9em;
-      color: #ccc;
-      text-shadow: 0 0 5px #000;
-      opacity: 0.8;
+      color: #ddd;
+      text-shadow: 0 0 4px #000;
     }
   </style>
 </head>
