@@ -25,7 +25,6 @@
       overflow-x: hidden;
     }
 
-    /* Overlay gelap agar teks tetap terbaca */
     body::before {
       content: "";
       position: fixed;
@@ -36,7 +35,7 @@
       z-index: 0;
     }
 
-    h1, .box, .contact-box, .back {
+    h1, .box, .contact-box {
       position: relative;
       z-index: 1;
     }
@@ -93,35 +92,82 @@
     }
 
     .contact-box {
-      margin-top: 30px;
-      padding: 20px 16px;
-      background: rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 14px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .contact-box h3 {
       font-size: 20px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      color: #00f2fe;
     }
 
-    .contact-box a {
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .contact-link {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 10px;
+      color: #00f2fe;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+    }
+
+    .contact-link:hover {
+      background: rgba(0, 242, 254, 0.15);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00f2fe;
+    }
+
+    .contact-link img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .contact-link.full {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
       display: block;
-      color: #00f2fe;
-      text-decoration: none;
-      margin: 10px 0;
-      font-size: 16px;
+      width: 100%;
+      background: #00f2fe;
+      color: black;
       font-weight: bold;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      color: #00f2fe;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
+    .back-button:hover {
+      background: #00c9de;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f2fe;
+    }
+
+    .back-button:active {
+      transform: scale(0.95);
     }
 
     p, strong {
@@ -156,26 +202,26 @@
     <a class="button" href="ovo.html">▶ OVO</a>
   </div>
 
-<!-- ✅ Kontak Rapi + Efek Glow -->
-<div class="contact-box">
-  <h3>Contact Me</h3>
+  <!-- ✅ Kontak Section -->
+  <div class="contact-box">
+    <h3>Contact Me</h3>
 
-  <div class="contact-row">
-    <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">
-      <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WhatsApp">
-      WhatsApp
+    <div class="contact-row">
+      <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">
+        <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp
+      </a>
+
+      <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">
+        <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram"> Telegram
+      </a>
+    </div>
+
+    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">
+      <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni"> Testimoni & Saluran WhatsApp
     </a>
 
-    <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">
-      <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram">
-      Telegram
-    </a>
+    <a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
   </div>
 
-  <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">
-    <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni">
-    Testimoni & Saluran WhatsApp
-  </a>
-
-  <a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
-</div>
+</body>
+        </html>
