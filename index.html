@@ -35,6 +35,8 @@
     /* === Neon Loader === */
     .loader {
       position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: black;
@@ -42,23 +44,24 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      gap: 20px;
       z-index: 9999;
       animation: fadeOut 1s ease 2.8s forwards;
     }
 
-    .neon-text {
-      font-size: 2em;
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;
-      animation: flicker 2s infinite;
-      margin-top: 20px;
-    }
-
     .loader img {
-      width: 100px;
+      width: 120px;
       height: auto;
       filter: drop-shadow(0 0 15px #00f2fe);
       animation: pulse 2s infinite;
+    }
+
+    .neon-text {
+      font-size: 1.5em;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;
+      animation: flicker 2s infinite;
     }
 
     @keyframes flicker {
@@ -156,8 +159,8 @@
   <!-- 💸 Konten Utama -->
   <div class="container">
     <h1>Hi, I'm Ryuu</h1>
-    <p>Selamat Datang di Website Pembayaran Resmi Ryuu Official!</p>
-    <p>Untuk melanjutkan pembayaran, klik tombol di bawah ini 👇</p>
+    <p>Selamat Datang di Website Pembayaran Resmi Ryuu!</p>
+    <p>Untuk Melanjutkan Pembayaran, Klik Tombol di Bawah Ini 👇</p>
     <a class="button" href="payment.html">Bayar Sekarang</a>
   </div>
 
