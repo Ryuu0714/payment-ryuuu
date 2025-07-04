@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryuu - OVO</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('JoYuri3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    button, a.back {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 24px;
+      background: #a678ff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover, a.back:hover {
+      background: #895fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Nomor OVO</h2>
+    <input id="ovo" value="085624470189" readonly>
+    <button onclick="copyToClipboard()">📋 Salin Nomor</button>
+    <br><br>
+    <a class="back" href="payment.html">⬅ Kembali</a>
+  </div>
+
+  <script>
+    function copyToClipboard() {
+      const input = document.getElementById("ovo");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Nomor berhasil disalin: " + input.value);
+    }
+  </script>
+
+</body>
+</html>
