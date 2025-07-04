@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryuu Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,62 +13,12 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    /* === Loading Screen === */
-    .loader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #0f2027;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      animation: fadeOut 1s ease 2.5s forwards;
-    }
-
-    .loader img {
-      width: 120px;
-      height: auto;
-      animation: pulse 2s infinite;
-    }
-
-    .loader p {
-      margin-top: 20px;
-      font-size: 1.2em;
-      color: #00f2fe;
-      letter-spacing: 1px;
-      animation: blink 1.2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    /* === Background Website === */
-    body {
+      font-family: 'Orbitron', sans-serif;
       background: url('ryuu-bg.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      position: relative;
       overflow: hidden;
     }
 
@@ -77,59 +28,109 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
       z-index: 0;
     }
 
-    /* === Konten Website === */
+    /* === Neon Loader === */
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.8s forwards;
+    }
+
+    .neon-text {
+      font-size: 2em;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;
+      animation: flicker 2s infinite;
+      margin-top: 20px;
+    }
+
+    .loader img {
+      width: 100px;
+      height: auto;
+      filter: drop-shadow(0 0 15px #00f2fe);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* === Konten === */
     .container {
       position: relative;
       z-index: 1;
-      background-color: rgba(255, 255, 255, 0.05);
+      max-width: 500px;
+      margin: 120px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 242, 254, 0.2);
+      backdrop-filter: blur(15px);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      width: 100%;
-      max-width: 500px;
-      margin: 100px auto;
       text-align: center;
-      animation: fadeInUp 1.2s ease;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+      animation: fadeInUp 1.2s ease 2.9s forwards;
       opacity: 0;
-      animation-delay: 2.5s;
-      animation-fill-mode: forwards;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       color: #00f2fe;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #00f2fe;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-bottom: 10px;
     }
 
     a.button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background-color: #00f2fe;
-      color: black;
+      margin-top: 25px;
+      padding: 15px 35px;
+      background-color: transparent;
+      color: #00f2fe;
+      border: 2px solid #00f2fe;
+      border-radius: 10px;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00f2fe;
     }
 
     a.button:hover {
-      background-color: #00d4e0;
-      box-shadow: 0 0 10px #00f2fe;
+      background-color: #00f2fe;
+      color: black;
+      box-shadow: 0 0 15px #00f2fe, 0 0 30px #00f2fe;
+      transform: scale(1.05);
     }
 
     a.button:active {
       transform: scale(0.95);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2) inset;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     @keyframes fadeInUp {
@@ -146,18 +147,18 @@
 </head>
 <body>
 
-  <!-- 🌀 Loading Screen -->
+  <!-- 🔄 Loading Screen -->
   <div class="loader">
-    <img src="ryuu-bg.png" alt="Killua Logo" />
-    <p>Loading...</p>
+    <img src="ryuu-bg.png" alt="Ryuu Logo" />
+    <div class="neon-text">Memuat Ryuu Payment...</div>
   </div>
 
-  <!-- 🧾 Konten Utama -->
+  <!-- 💸 Konten Utama -->
   <div class="container">
-    <h1>Hii,I'm Ryuu</h1>
-    <p>Selamat Datang di Website Payment Ryuu Official</p>
-    <p>Untuk Melanjutkan Pembambayaran Klik Aja Tombol Di Bawah Ini😊</p>
-    <a class="button" href="payment.html">Go to Payment</a>
+    <h1>Hi, I'm Ryuu</h1>
+    <p>Selamat Datang di Website Pembayaran Resmi Ryuu Official!</p>
+    <p>Untuk melanjutkan pembayaran, klik tombol di bawah ini 👇</p>
+    <a class="button" href="payment.html">Bayar Sekarang</a>
   </div>
 
 </body>
