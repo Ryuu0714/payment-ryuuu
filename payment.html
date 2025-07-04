@@ -42,8 +42,9 @@
 
     h1 {
       color: #00f2fe;
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 24px;
+      text-shadow: 0 0 10px #00f2fe;
     }
 
     .box {
@@ -52,7 +53,33 @@
       padding: 20px 16px;
       margin: 20px auto;
       max-width: 400px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
+    }
+
+    .qris-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    img.qris {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      border: 2px solid #00f2fe;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+      margin-bottom: 10px;
+    }
+
+    .qris-note {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .qris-note strong {
+      color: #00f2fe;
     }
 
     .button {
@@ -81,14 +108,6 @@
     .button:active {
       transform: scale(0.95);
       box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-    }
-
-    img.qris {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 16px;
-      border-radius: 10px;
-      border: 2px solid #00f2fe;
     }
 
     .contact-box {
@@ -181,10 +200,10 @@
 
   <!-- ✅ QRIS -->
   <div class="box">
-    <label>Silahkan Pilih Salah Satu Metode Pembayaran di Bawah Ini</label>
+    <div class="qris-title">📷 Scan Kode QR di Bawah Ini</div>
     <img src="qris.png" alt="QRIS" class="qris">
-    <p><strong>Scan Kode QR di Atas Jika Kamu Bukan Pengguna Premium 😊</strong></p>
-    <strong>NOTE:</strong> WAJIB SS BUKTI TRANSFER!!
+    <p class="qris-note">Untuk pengguna non-premium, silakan scan QR ini untuk pembayaran.</p>
+    <p class="qris-note"><strong>NOTE:</strong> Wajib kirim bukti transfer via kontak di bawah!</p>
   </div>
 
   <!-- ✅ DANA -->
@@ -224,4 +243,4 @@
   </div>
 
 </body>
-        </html>
+</html>
