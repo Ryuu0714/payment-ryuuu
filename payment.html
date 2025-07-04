@@ -74,6 +74,29 @@
       margin-bottom: 10px;
     }
 
+    .button {
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
     button {
       width: 100%;
       background: #00f2fe;
@@ -108,84 +131,5 @@
     }
 
     .contact-box a {
-      display: block;
-      color: #00f2fe;
-      text-decoration: none;
-      margin: 10px 0;
-      font-size: 16px;
-      font-weight: bold;
-    }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      color: #00f2fe;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    img.qris {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 16px;
-      border-radius: 10px;
-      border: 2px solid #00f2fe;
-    }
-
-    p, strong {
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Metode E-Wallet</h1>
-
-  <!-- ✅ QRIS -->
-  <div class="box">
-    <label>Silahkan Pilih Salah Satu Metode Pembayaran di Bawah Imi</label>
-    <img src="qris.png" alt="QRIS" class="qris">
-    <p><strong>Scan Kode QR di Atas Jika Kamu Bukan Pengguna Premium 😊</strong></p>
-    <strong>NOTE:</strong> WAJIB SS BUKTI TRANSFER!!
-  </div>
-
-<!-- ✅ DANA -->
-<div class="box">
-  <a class="button" href="dana.html">▶ DANA</a>
-</div>
-
-<!-- ✅ GoPay -->
-<div class="box">
-  <a class="button" href="gopay.html">▶ GoPay</a>
-</div>
-
-<!-- ✅ OVO -->
-<div class="box">
-  <a class="button" href="ovo.html">▶ OVO</a>
-</div>
-  
-  <!-- ✅ Kontak -->
-  <div class="contact-box">
-    <h3>Contact Me</h3>
-    <a href="https://wa.me/6285624470189" target="_blank">📞 WhatsApp: Klik</a>
-    <a href="https://t.me/RyuuVL" target="_blank">📨 Telegram: Klik</a>
-    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank">📣 Testimoni & Saluran WhatsApp: Klik</a>
-  </div>
-
-  <!-- ✅ Back -->
-  <a href="index.html" class="back">⬅ Kembali ke Halaman Utama</a>
-
-  <!-- ✅ Script -->
-  <script>
-    function copyToClipboard(id) {
-      const copyText = document.getElementById(id);
-      copyText.select();
-      copyText.setSelectionRange(0, 99999); // Untuk mobile
-      document.execCommand("copy");
-      alert("Nomor berhasil disalin: " + copyText.value);
-    }
-  </script>
-
-</body>
 </html>
