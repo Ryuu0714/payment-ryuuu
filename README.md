@@ -1,3 +1,3 @@
 # RyuuVL
-Credit Ryuu
+Credit Ryuu -
 Ikan Sepat Ikan Teri😹
