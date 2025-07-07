@@ -13,16 +13,14 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: url('bg-payment.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
       color: white;
       text-align: center;
       padding: 30px 12px;
-      font-size: 16px;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
     body::before {
@@ -35,18 +33,78 @@
       z-index: 0;
     }
 
-    h1, .box, .contact-box {
+    h1, .wallet-box, .contact-box {
       position: relative;
       z-index: 1;
     }
 
     h1 {
       color: #00f2fe;
-      font-size: 26px;
-      margin-bottom: 24px;
+      font-size: 28px;
+      margin-bottom: 30px;
       text-shadow: 0 0 10px #00f2fe;
     }
 
+    .wallet-box {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 0 16px rgba(0, 242, 254, 0.2);
+      text-align: left;
+    }
+
+    .wallet-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .wallet-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: white;
+      padding: 6px;
+    }
+
+    .wallet-header h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .wallet-number {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      font-size: 17px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .copy-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #5f2c82, #49a09d);
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 18px #00f2fe;
+    }
+
+    /* QRIS */
     .box {
       background: rgba(255, 255, 255, 0.08);
       border-radius: 14px;
@@ -82,53 +140,7 @@
       color: #00f2fe;
     }
 
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 0;
-      margin: 10px 0;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      backdrop-filter: blur(4px);
-    }
-
-    .button:hover {
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
-      transform: scale(1.03);
-    }
-
-    .button:active {
-      transform: scale(0.95);
-      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .icon-circle {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      color: white;
-      font-size: 14px;
-    }
-
-    .dana-icon { background-color: #007ee5; }
-    .gopay-icon { background-color: #00aadf; }
-    .ovo-icon { background-color: #4e2e7f; }
-
+    /* Contact */
     .contact-box {
       margin-top: 40px;
       padding: 20px;
@@ -207,10 +219,6 @@
     .back-button:active {
       transform: scale(0.95);
     }
-
-    p, strong {
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
@@ -219,36 +227,45 @@
 
   <!-- ✅ QRIS -->
   <div class="box">
-    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>
+    <div class="qris-title">Silahkan Pilih Salah Satu Metode Pembayaran</div>
     <img src="qris.png" alt="QRIS" class="qris">
-    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>
+    <p class="qris-note">Untuk Pengguna Non-premium, Silakan Scan QR Ini Untuk Pembayaran.</p>
     <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>
   </div>
 
   <!-- ✅ DANA -->
-  <div class="box">
-    <a class="button" href="dana.html">
-      <span class="icon-circle dana-icon">D</span> ▶ DANA
-    </a>
+  <div class="wallet-box">
+    <div class="wallet-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Logo_dana_blue.svg/512px-Logo_dana_blue.svg.png" alt="DANA">
+      <h2>DANA</h2>
+    </div>
+    <div class="wallet-number" id="dana-number">085624470189</div>
+    <button class="copy-btn" onclick="copyText('dana-number')">Salin Nomor DANA</button>
   </div>
 
   <!-- ✅ GoPay -->
-  <div class="box">
-    <a class="button" href="gopay.html">
-      <span class="icon-circle gopay-icon">G</span> ▶ GoPay
-    </a>
+  <div class="wallet-box">
+    <div class="wallet-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/GoPay_Logo.png" alt="GoPay">
+      <h2>GoPay</h2>
+    </div>
+    <div class="wallet-number" id="gopay-number">085624470189</div>
+    <button class="copy-btn" onclick="copyText('gopay-number')">Salin Nomor GoPay</button>
   </div>
 
   <!-- ✅ OVO -->
-  <div class="box">
-    <a class="button" href="ovo.html">
-      <span class="icon-circle ovo-icon">O</span> ▶ OVO
-    </a>
+  <div class="wallet-box">
+    <div class="wallet-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Logo_OVO_purple.svg" alt="OVO">
+      <h2>OVO</h2>
+    </div>
+    <div class="wallet-number" id="ovo-number">085624470189</div>
+    <button class="copy-btn" onclick="copyText('ovo-number')">Salin Nomor OVO</button>
   </div>
 
   <!-- ✅ Kontak -->
   <div class="contact-box">
-    <h3>Contact Me</h3>
+    <h3>Hubungi Kami</h3>
     <div class="contact-row">
       <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">
         <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp
@@ -265,6 +282,15 @@
 
     <a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
   </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor berhasil disalin: ' + text);
+      });
+    }
+  </script>
 
 </body>
 </html>
