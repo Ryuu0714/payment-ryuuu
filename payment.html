@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Ryuu Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -13,7 +14,7 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Orbitron', sans-serif;
       background: url('bg-payment.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
@@ -83,7 +84,10 @@
     }
 
     .button {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
       padding: 14px 0;
       margin: 10px 0;
@@ -97,6 +101,11 @@
       transition: all 0.25s ease;
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
       backdrop-filter: blur(4px);
+    }
+
+    .button img {
+      width: 24px;
+      height: 24px;
     }
 
     .button:hover {
@@ -198,27 +207,35 @@
 
   <h1>Metode E-Wallet</h1>
 
+  <!-- ✅ QRIS -->
+  <div class="box">
+    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>
+    <img src="qris.png" alt="QRIS" class="qris">
+    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>
+    <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>
+  </div>
+
   <!-- ✅ DANA -->
-<div class="box">
-  <div class="qris-title">DANA</div>
-  <img src="https://img.icons8.com/fluency/96/dana.png" alt="Logo DANA" class="qris">
-  <a class="button" href="dana.html">▶ Bayar via DANA</a>
-</div>
+  <div class="box">
+    <a class="button" href="dana.html">
+      <img src="https://img.icons8.com/color/48/dana.png" alt="DANA"> DANA
+    </a>
+  </div>
 
-<!-- ✅ GoPay -->
-<div class="box">
-  <div class="qris-title">GoPay</div>
-  <img src="https://img.icons8.com/color/96/gopay.png" alt="Logo GoPay" class="qris">
-  <a class="button" href="gopay.html">▶ Bayar via GoPay</a>
-</div>
+  <!-- ✅ GoPay -->
+  <div class="box">
+    <a class="button" href="gopay.html">
+      <img src="https://img.icons8.com/color/48/gopay.png" alt="GoPay"> GoPay
+    </a>
+  </div>
 
-<!-- ✅ OVO -->
-<div class="box">
-  <div class="qris-title">OVO</div>
-  <img src="https://img.icons8.com/color/96/ovo.png" alt="Logo OVO" class="qris">
-  <a class="button" href="ovo.html">▶ Bayar via OVO</a>
-</div>
-  
+  <!-- ✅ OVO -->
+  <div class="box">
+    <a class="button" href="ovo.html">
+      <img src="https://img.icons8.com/color/48/ovo.png" alt="OVO"> OVO
+    </a>
+  </div>
+
   <!-- ✅ Kontak Section -->
   <div class="contact-box">
     <h3>Contact Me</h3>
