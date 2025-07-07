@@ -1,230 +1,224 @@
 
-<!DOCTYPE html><html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Ryuu Store - Metode E-Wallet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: sans-serif;
-      background: url('bg-payment.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      color: white;
-      text-align: center;
-      padding: 30px 12px;
-      font-size: 16px;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 0;
-    }
-    h1, .box, .contact-box {
-      position: relative;
-      z-index: 1;
-    }
-    h1 {
-      color: #00f2fe;
-      font-size: 26px;
-      margin-bottom: 24px;
-      text-shadow: 0 0 10px #00f2fe;
-    }
-    .box {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      padding: 20px 16px;
-      margin: 20px auto;
-      max-width: 400px;
-      box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
-    }
-    .qris-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-    img.qris {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 10px;
-      border: 2px solid #00f2fe;
-      box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
-      margin-bottom: 10px;
-    }
-    .qris-note {
-      font-size: 14px;
-      margin-top: 10px;
-      color: #fff;
-    }
-    .qris-note strong {
-      color: #00f2fe;
-    }
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 0;
-      margin: 10px 0;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      backdrop-filter: blur(4px);
-    }
-    .button:hover {
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
-      transform: scale(1.03);
-    }
-    .button:active {
-      transform: scale(0.95);
-      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-    }
-    .button img {
-      width: 24px;
-      height: 24px;
-    }
-    .contact-box {
-      margin-top: 40px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .contact-box h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #00f2fe;
-    }
-    .contact-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .contact-link {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.08);
-      padding: 14px;
-      border-radius: 10px;
-      color: #00f2fe;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
-    }
-    .contact-link:hover {
-      background: rgba(0, 242, 254, 0.15);
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00f2fe;
-    }
-    .contact-link img {
-      width: 24px;
-      height: 24px;
-    }
-    .contact-link.full {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .back-button {
-      display: block;
-      width: 100%;
-      background: #00f2fe;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
-      transition: all 0.3s ease;
-    }
-    .back-button:hover {
-      background: #00c9de;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00f2fe;
-    }
-    .back-button:active {
-      transform: scale(0.95);
-    }
-    p, strong {
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Metode E-Wallet</h1>  <!-- ✅ QRIS -->  <div class="box">
-    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>
-    <img src="qris.png" alt="QRIS" class="qris">
-    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>
-    <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>
-  </div>  <!-- ✅ DANA -->  <div class="box">
-    <a class="button" href="dana.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Logo_dana_blue.svg/512px-Logo_dana_blue.svg.png" alt="DANA">
-      DANA
-    </a>
-  </div>  
-  
-<!-- ✅ DANA -->
-<div class="box">
-  <a class="contact-link full" href="dana.html">
-    <img src="https://img.icons8.com/fluency/25/dana.png" alt="DANA"> DANA
-  </a>
-</div>
+ <!DOCTYPE html>  <html lang="id">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>Ryuu Store</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <style>  
+    * {  
+      box-sizing: border-box;  
+      margin: 0;  
+      padding: 0;  
+    }  body {  
+  font-family: sans-serif;  
+  background: url('bg-payment.jpg') no-repeat center center fixed;  
+  background-size: cover;  
+  position: relative;  
+  color: white;  
+  text-align: center;  
+  padding: 30px 12px;  
+  font-size: 16px;  
+  min-height: 100vh;  
+  overflow-x: hidden;  
+}  
 
-<!-- ✅ GoPay -->
-<div class="box">
-  <a class="contact-link full" href="gopay.html">
-    <img src="https://img.icons8.com/color/25/gopay.png" alt="GoPay"> GoPay
-  </a>
-</div>
+body::before {  
+  content: "";  
+  position: fixed;  
+  top: 0; left: 0;  
+  width: 100%; height: 100%;  
+  background-color: rgba(0, 0, 0, 0.6);  
+  backdrop-filter: blur(4px);  
+  z-index: 0;  
+}  
 
-<!-- ✅ OVO -->
-<div class="box">
-  <a class="contact-link full" href="ovo.html">
-    <img src="https://img.icons8.com/fluency/25/ovo.png" alt="OVO"> OVO
-  </a>
-</div>
-  
-  <!-- ✅ Kontak Section -->  <div class="contact-box">
-    <h3>Contact Me</h3>
-    <div class="contact-row">
-      <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">
-        <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp
-      </a>
-      <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">
-        <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram"> Telegram
-      </a>
-    </div>
-    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">
-      <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni"> Testimoni & Saluran WhatsApp
-    </a>
-    <a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
-  </div>
-</body>
-        </html>
+h1, .box, .contact-box {  
+  position: relative;  
+  z-index: 1;  
+}  
+
+h1 {  
+  color: #00f2fe;  
+  font-size: 26px;  
+  margin-bottom: 24px;  
+  text-shadow: 0 0 10px #00f2fe;  
+}  
+
+.box {  
+  background: rgba(255, 255, 255, 0.08);  
+  border-radius: 14px;  
+  padding: 20px 16px;  
+  margin: 20px auto;  
+  max-width: 400px;  
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);  
+}  
+
+.qris-title {  
+  font-size: 18px;  
+  font-weight: bold;  
+  margin-bottom: 10px;  
+  color: #ffffff;  
+}  
+
+img.qris {  
+  width: 100%;  
+  max-width: 280px;  
+  border-radius: 10px;  
+  border: 2px solid #00f2fe;  
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);  
+  margin-bottom: 10px;  
+}  
+
+.qris-note {  
+  font-size: 14px;  
+  margin-top: 10px;  
+  color: #fff;  
+}  
+
+.qris-note strong {  
+  color: #00f2fe;  
+}  
+
+.button {  
+  display: block;  
+  width: 100%;  
+  padding: 14px 0;  
+  margin: 10px 0;  
+  background: rgba(255, 255, 255, 0.1);  
+  color: white;  
+  border: 1px solid rgba(255, 255, 255, 0.4);  
+  border-radius: 12px;  
+  font-weight: bold;  
+  font-size: 16px;  
+  text-decoration: none;  
+  transition: all 0.25s ease;  
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);  
+  backdrop-filter: blur(4px);  
+}  
+
+.button:hover {  
+  background: rgba(255, 255, 255, 0.25);  
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);  
+  transform: scale(1.03);  
+}  
+
+.button:active {  
+  transform: scale(0.95);  
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);  
+}  
+
+.contact-box {  
+  margin-top: 40px;  
+  padding: 20px;  
+  background: rgba(255, 255, 255, 0.08);  
+  border-radius: 14px;  
+  max-width: 420px;  
+  margin-left: auto;  
+  margin-right: auto;  
+}  
+
+.contact-box h3 {  
+  font-size: 20px;  
+  margin-bottom: 20px;  
+  color: #00f2fe;  
+}  
+
+.contact-row {  
+  display: flex;  
+  justify-content: space-between;  
+  gap: 16px;  
+  margin-bottom: 20px;  
+}  
+
+.contact-link {  
+  flex: 1;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  gap: 10px;  
+  background: rgba(255, 255, 255, 0.08);  
+  padding: 14px;  
+  border-radius: 10px;  
+  color: #00f2fe;  
+  font-weight: bold;  
+  text-decoration: none;  
+  transition: all 0.3s ease;  
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);  
+}  
+
+.contact-link:hover {  
+  background: rgba(0, 242, 254, 0.15);  
+  transform: scale(1.05);  
+  box-shadow: 0 0 15px #00f2fe;  
+}  
+
+.contact-link img {  
+  width: 24px;  
+  height: 24px;  
+}  
+
+.contact-link.full {  
+  width: 100%;  
+  justify-content: center;  
+  margin-bottom: 20px;  
+}  
+
+.back-button {  
+  display: block;  
+  width: 100%;  
+  background: #00f2fe;  
+  color: black;  
+  font-weight: bold;  
+  text-decoration: none;  
+  padding: 14px;  
+  border-radius: 10px;  
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);  
+  transition: all 0.3s ease;  
+}  
+
+.back-button:hover {  
+  background: #00c9de;  
+  transform: scale(1.05);  
+  box-shadow: 0 0 20px #00f2fe;  
+}  
+
+.back-button:active {  
+  transform: scale(0.95);  
+}  
+
+p, strong {  
+  font-size: 14px;  
+}
+
+  </style>  
+</head>  
+<body>    <h1>Metode E-Wallet</h1>    <!-- ✅ QRIS -->    <div class="box">  
+    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>  
+    <img src="qris.png" alt="QRIS" class="qris">  
+    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>  
+    <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>  
+  </div>    <!-- ✅ DANA -->    <div class="box">  
+    <a class="button" href="dana.html">▶ DANA</a>  
+  </div>    <!-- ✅ GoPay -->    <div class="box">  
+    <a class="button" href="gopay.html">▶ GoPay</a>  
+  </div>    <!-- ✅ OVO -->    <div class="box">  
+    <a class="button" href="ovo.html">▶ OVO</a>  
+  </div>    <!-- ✅ Kontak Section -->    <div class="contact-box">  
+    <h3>Contact Me</h3>  <div class="contact-row">  
+  <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">  
+    <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp  
+  </a>  
+
+  <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">  
+    <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram"> Telegram  
+  </a>  
+</div>  
+
+<a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">  
+  <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni"> Testimoni & Saluran WhatsApp  
+</a>  
+
+<a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
+
+  </div>  </body>  
+</html>  
