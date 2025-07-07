@@ -1,236 +1,270 @@
 
- <!DOCTYPE html>  <html lang="id">  
-<head>  
-  <meta charset="UTF-8">  
-  <title>Ryuu Store</title>  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <style>  
-    * {  
-      box-sizing: border-box;  
-      margin: 0;  
-      padding: 0;  
-    }  body {  
-  font-family: sans-serif;  
-  background: url('bg-payment.jpg') no-repeat center center fixed;  
-  background-size: cover;  
-  position: relative;  
-  color: white;  
-  text-align: center;  
-  padding: 30px 12px;  
-  font-size: 16px;  
-  min-height: 100vh;  
-  overflow-x: hidden;  
-}  
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ryuu Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body::before {  
-  content: "";  
-  position: fixed;  
-  top: 0; left: 0;  
-  width: 100%; height: 100%;  
-  background-color: rgba(0, 0, 0, 0.6);  
-  backdrop-filter: blur(4px);  
-  z-index: 0;  
-}  
+    body {
+      font-family: sans-serif;
+      background: url('bg-payment.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 30px 12px;
+      font-size: 16px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-h1, .box, .contact-box {  
-  position: relative;  
-  z-index: 1;  
-}  
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
 
-h1 {  
-  color: #00f2fe;  
-  font-size: 26px;  
-  margin-bottom: 24px;  
-  text-shadow: 0 0 10px #00f2fe;  
-}  
+    h1, .box, .contact-box {
+      position: relative;
+      z-index: 1;
+    }
 
-.box {  
-  background: rgba(255, 255, 255, 0.08);  
-  border-radius: 14px;  
-  padding: 20px 16px;  
-  margin: 20px auto;  
-  max-width: 400px;  
-  box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);  
-}  
+    h1 {
+      color: #00f2fe;
+      font-size: 26px;
+      margin-bottom: 24px;
+      text-shadow: 0 0 10px #00f2fe;
+    }
 
-.qris-title {  
-  font-size: 18px;  
-  font-weight: bold;  
-  margin-bottom: 10px;  
-  color: #ffffff;  
-}  
+    .box {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px 16px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
+    }
 
-img.qris {  
-  width: 100%;  
-  max-width: 280px;  
-  border-radius: 10px;  
-  border: 2px solid #00f2fe;  
-  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);  
-  margin-bottom: 10px;  
-}  
+    .qris-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
 
-.qris-note {  
-  font-size: 14px;  
-  margin-top: 10px;  
-  color: #fff;  
-}  
+    img.qris {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      border: 2px solid #00f2fe;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+      margin-bottom: 10px;
+    }
 
-.qris-note strong {  
-  color: #00f2fe;  
-}  
+    .qris-note {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #fff;
+    }
 
-.button {  
-  display: block;  
-  width: 100%;  
-  padding: 14px 0;  
-  margin: 10px 0;  
-  background: rgba(255, 255, 255, 0.1);  
-  color: white;  
-  border: 1px solid rgba(255, 255, 255, 0.4);  
-  border-radius: 12px;  
-  font-weight: bold;  
-  font-size: 16px;  
-  text-decoration: none;  
-  transition: all 0.25s ease;  
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);  
-  backdrop-filter: blur(4px);  
-}  
+    .qris-note strong {
+      color: #00f2fe;
+    }
 
-.button:hover {  
-  background: rgba(255, 255, 255, 0.25);  
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);  
-  transform: scale(1.03);  
-}  
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 0;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      backdrop-filter: blur(4px);
+    }
 
-.button:active {  
-  transform: scale(0.95);  
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);  
-}  
+    .button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+      transform: scale(1.03);
+    }
 
-.contact-box {  
-  margin-top: 40px;  
-  padding: 20px;  
-  background: rgba(255, 255, 255, 0.08);  
-  border-radius: 14px;  
-  max-width: 420px;  
-  margin-left: auto;  
-  margin-right: auto;  
-}  
+    .button:active {
+      transform: scale(0.95);
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    }
 
-.contact-box h3 {  
-  font-size: 20px;  
-  margin-bottom: 20px;  
-  color: #00f2fe;  
-}  
+    .icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      font-size: 14px;
+    }
 
-.contact-row {  
-  display: flex;  
-  justify-content: space-between;  
-  gap: 16px;  
-  margin-bottom: 20px;  
-}  
+    .dana-icon { background-color: #007ee5; }
+    .gopay-icon { background-color: #00aadf; }
+    .ovo-icon { background-color: #4e2e7f; }
 
-.contact-link {  
-  flex: 1;  
-  display: flex;  
-  align-items: center;  
-  justify-content: center;  
-  gap: 10px;  
-  background: rgba(255, 255, 255, 0.08);  
-  padding: 14px;  
-  border-radius: 10px;  
-  color: #00f2fe;  
-  font-weight: bold;  
-  text-decoration: none;  
-  transition: all 0.3s ease;  
-  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);  
-}  
+    .contact-box {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.contact-link:hover {  
-  background: rgba(0, 242, 254, 0.15);  
-  transform: scale(1.05);  
-  box-shadow: 0 0 15px #00f2fe;  
-}  
+    .contact-box h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #00f2fe;
+    }
 
-.contact-link img {  
-  width: 24px;  
-  height: 24px;  
-}  
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
 
-.contact-link.full {  
-  width: 100%;  
-  justify-content: center;  
-  margin-bottom: 20px;  
-}  
+    .contact-link {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 10px;
+      color: #00f2fe;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+    }
 
-.back-button {  
-  display: block;  
-  width: 100%;  
-  background: #00f2fe;  
-  color: black;  
-  font-weight: bold;  
-  text-decoration: none;  
-  padding: 14px;  
-  border-radius: 10px;  
-  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);  
-  transition: all 0.3s ease;  
-}  
+    .contact-link:hover {
+      background: rgba(0, 242, 254, 0.15);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00f2fe;
+    }
 
-.back-button:hover {  
-  background: #00c9de;  
-  transform: scale(1.05);  
-  box-shadow: 0 0 20px #00f2fe;  
-}  
+    .contact-link img {
+      width: 24px;
+      height: 24px;
+    }
 
-.back-button:active {  
-  transform: scale(0.95);  
-}  
+    .contact-link.full {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-p, strong {  
-  font-size: 14px;  
-}
+    .back-button {
+      display: block;
+      width: 100%;
+      background: #00f2fe;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
+    }
 
-  </style>  
-</head>  
-<body>    <h1>Metode E-Wallet</h1>    <!-- ✅ QRIS -->    <div class="box">  
-    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>  
-    <img src="qris.png" alt="QRIS" class="qris">  
-    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>  
-    <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>  
-  </div>    
- 
- <!-- ✅ DANA -->    
- <div class="box">  
-    <a class="button" href="dana.html">▶ DANA</a>  
-  </div>  
- 
- <!-- ✅ GoPay -->    
- <div class="box">  
-    <a class="button" href="gopay.html">▶ GoPay</a>  
-  </div>    
- 
- <!-- ✅ OVO -->   
- <div class="box">  
-    <a class="button" href="ovo.html">▶ OVO</a>  
-  </div>    
- 
- <!-- ✅ Kontak Section --> 
- <div class="contact-box">  
-    <h3>Contact Me</h3>  <div class="contact-row">  
-  <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">  
-    <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp  
-  </a>  
+    .back-button:hover {
+      background: #00c9de;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f2fe;
+    }
 
-  <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">  
-    <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram"> Telegram  
-  </a>  
-</div>  
+    .back-button:active {
+      transform: scale(0.95);
+    }
 
-<a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">  
-  <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni"> Testimoni & Saluran WhatsApp  
-</a>  
+    p, strong {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
 
-<a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
+  <h1>Metode E-Wallet</h1>
 
-  </div>  </body>  
-</html>  
+  <!-- ✅ QRIS -->
+  <div class="box">
+    <div class="qris-title">Silahkan Pilih Satu Satu Metode Pembayarannya</div>
+    <img src="qris.png" alt="QRIS" class="qris">
+    <p class="qris-note">Untuk Pengguna Non-Premium, Silakan Scan QR Ini Untuk Pembayaran.</p>
+    <p class="qris-note"><strong>NOTE:</strong> Wajib Kirim Bukti Transfer!</p>
+  </div>
+
+  <!-- ✅ DANA -->
+  <div class="box">
+    <a class="button" href="dana.html">
+      <span class="icon-circle dana-icon">D</span> ▶ DANA
+    </a>
+  </div>
+
+  <!-- ✅ GoPay -->
+  <div class="box">
+    <a class="button" href="gopay.html">
+      <span class="icon-circle gopay-icon">G</span> ▶ GoPay
+    </a>
+  </div>
+
+  <!-- ✅ OVO -->
+  <div class="box">
+    <a class="button" href="ovo.html">
+      <span class="icon-circle ovo-icon">O</span> ▶ OVO
+    </a>
+  </div>
+
+  <!-- ✅ Kontak -->
+  <div class="contact-box">
+    <h3>Contact Me</h3>
+    <div class="contact-row">
+      <a href="https://wa.me/6285624470189" target="_blank" class="contact-link">
+        <img src="https://img.icons8.com/ios-filled/25/00f2fe/whatsapp.png" alt="WA"> WhatsApp
+      </a>
+
+      <a href="https://t.me/RyuuVL" target="_blank" class="contact-link">
+        <img src="https://img.icons8.com/ios-filled/25/00f2fe/telegram-app.png" alt="Telegram"> Telegram
+      </a>
+    </div>
+
+    <a href="https://whatsapp.com/channel/0029VbB7wZE2f3EIK0EV4p1F" target="_blank" class="contact-link full">
+      <img src="https://img.icons8.com/ios-filled/25/00f2fe/groups.png" alt="Testimoni"> Testimoni & Saluran WhatsApp
+    </a>
+
+    <a href="index.html" class="back-button">⬅ Kembali ke Halaman Utama</a>
+  </div>
+
+</body>
+</html>
