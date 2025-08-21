@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Orbitron', sans-serif;
-      background: url('JoYuri2.jpg') no-repeat center center fixed;
+      background: url('JoYuri.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
@@ -27,65 +27,83 @@
     }
 
     .box {
-      background: rgba(0, 0, 0, 0.25); /* ringan dan transparan */
+      background: rgba(0, 0, 0, 0.7);
       padding: 30px 25px;
-      border-radius: 16px;
-      max-width: 400px;
+      border-radius: 20px;
+      max-width: 420px;
       margin: auto;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 242, 254, 0.25);
+      animation: fadeIn 1s ease-out;
     }
 
     h2 {
       margin-bottom: 20px;
-      font-size: 1.8em;
+      font-size: 2em;
       color: #00f2fe;
-      text-shadow: 0 0 10px #00f2fe;
+      text-shadow: 0 0 12px #00f2fe, 0 0 30px #0ff;
     }
 
     input {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       font-size: 16px;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      color: #222;
+      background: rgba(255, 255, 255, 0.95);
+      color: #111;
       font-weight: bold;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .owner {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
     button, a.back {
       display: inline-block;
       margin-top: 10px;
-      padding: 12px 28px;
-      background: #00f2fe;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
       color: black;
       font-weight: bold;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 0 12px #00f2fe;
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.6);
+      font-family: 'Orbitron', sans-serif;
     }
 
     button:hover, a.back:hover {
-      background: #00c9de;
-      transform: scale(1.05);
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      transform: translateY(-2px) scale(1.05);
     }
 
     button:active, a.back:active {
       transform: scale(0.95);
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .credit {
-      margin-top: 35px;
+      margin-top: 40px;
       font-size: 0.9em;
       color: #ddd;
-      text-shadow: 0 0 4px #000;
+      text-shadow: 0 0 6px #000;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -93,7 +111,8 @@
 
   <div class="box">
     <h2>Nomor GoPay</h2>
-    <input id="gopay" value="085624470189" readonly>
+    <input id="gopay" value="081234567890" readonly>
+    <div class="owner">A/N Ditcii</div>
     <button onclick="copyToClipboard()">📋 Salin Nomor</button>
     <br><br>
     <a class="back" href="payment.html">⬅ Kembali</a>
@@ -106,8 +125,8 @@
       const input = document.getElementById("gopay");
       input.select();
       input.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Nomor berhasil disalin: " + input.value);
+      navigator.clipboard.writeText(input.value);
+      alert("✅ Nomor berhasil disalin: " + input.value);
     }
   </script>
 
