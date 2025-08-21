@@ -7,16 +7,12 @@
   <title>Website Ditcii</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body {
       height: 100%;
       font-family: 'Orbitron', sans-serif;
-      background: url('/ditcii-bg.png') no-repeat center center fixed;
+      background: url('https://i.ibb.co/wxyz456/ditcii-bg.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
       overflow: hidden;
@@ -32,21 +28,15 @@
       z-index: 0;
     }
 
-    /* === Neon Loader === */
+    /* Loader */
     .loader {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-      z-index: 9999;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      gap: 20px; z-index: 9999;
       animation: fadeOut 1s ease 2.8s forwards;
     }
 
@@ -64,100 +54,59 @@
       animation: flicker 2s infinite;
     }
 
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
+    @keyframes flicker { 0%,100%{opacity:1;} 50%{opacity:.5;} }
+    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1);} }
+    @keyframes fadeOut { to{opacity:0;visibility:hidden;} }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    /* === Konten === */
+    /* Konten */
     .container {
       position: relative;
       z-index: 1;
       max-width: 500px;
       margin: 120px auto;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(0, 242, 254, 0.2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,242,254,0.2);
       backdrop-filter: blur(15px);
       padding: 40px;
       border-radius: 20px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+      box-shadow: 0 0 25px rgba(0,242,254,0.2);
       animation: fadeInUp 1.2s ease 2.9s forwards;
       opacity: 0;
     }
 
-    h1 {
-      font-size: 2.2em;
-      color: #00f2fe;
-      margin-bottom: 15px;
-      text-shadow: 0 0 10px #00f2fe;
-    }
-
-    p {
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
+    h1 { font-size: 2.2em; color: #00f2fe; margin-bottom: 15px; text-shadow: 0 0 10px #00f2fe; }
+    p { font-size: 1.1em; margin-bottom: 10px; }
 
     a.button {
-      display: inline-block;
-      margin-top: 25px;
+      display: inline-block; margin-top: 25px;
       padding: 15px 35px;
-      background-color: transparent;
-      color: #00f2fe;
-      border: 2px solid #00f2fe;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px #00f2fe;
+      background: transparent; color: #00f2fe;
+      border: 2px solid #00f2fe; border-radius: 10px;
+      font-weight: bold; text-decoration: none;
+      transition: .3s ease; box-shadow: 0 0 10px #00f2fe;
     }
 
     a.button:hover {
-      background-color: #00f2fe;
-      color: black;
+      background: #00f2fe; color: black;
       box-shadow: 0 0 15px #00f2fe, 0 0 30px #00f2fe;
       transform: scale(1.05);
     }
 
-    a.button:active {
-      transform: scale(0.95);
-      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
+    a.button:active { transform: scale(0.95); box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
   </style>
 </head>
 <body>
 
-  <!-- 🔄 Loading Screen -->
+  <!-- Loader -->
   <div class="loader">
-    <!-- Pastikan file ditaruh di folder public/ -->
-    <img src="/ditcii-logo.png" alt="Ditcii Logo" />
+    <img src="https://i.ibb.co/abcd123/ditcii-logo.png" alt="Ditcii Logo" />
     <div class="neon-text">Loading Bang Sabar😊...</div>
   </div>
 
-  <!-- 💸 Konten Utama -->
+  <!-- Konten -->
   <div class="container">
     <h1>Hi, I'm Ditcii</h1>
     <p>Selamat Datang di Website Ditcii!</p>
