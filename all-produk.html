@@ -4,92 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Produk Ditcii</title>
+  <title>Katalog Produk Ditcii</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
+      background: #0d1117;
+      color: #e6edf3;
       margin: 0;
       padding: 20px;
     }
-    h1 {
+    h1, h2 {
       text-align: center;
-      margin-bottom: 30px;
-      color: #38bdf8;
+      color: #58a6ff;
+      margin-bottom: 15px;
     }
-    .section {
-      margin-bottom: 40px;
+    .produk-utama, .produk-lainnya {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background: #161b22;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .produk-utama ul {
+      list-style: none;
+      padding: 0;
+    }
+    .produk-utama li {
+      font-size: 1.1rem;
+      padding: 6px 0;
+      border-bottom: 1px solid #30363d;
+    }
+    .produk-utama li:last-child {
+      border-bottom: none;
     }
     .card {
-      background: #1e293b;
+      background: #21262d;
       border-radius: 12px;
       padding: 20px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
-    .card h2 {
+    .card h3 {
       margin-top: 0;
-      font-size: 20px;
-      color: #38bdf8;
+      color: #79c0ff;
     }
-    .card ul {
-      padding-left: 20px;
-      margin: 10px 0;
-    }
-    .card ul li {
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-    .price {
+    .harga {
+      font-size: 1.2rem;
+      color: #3fb950;
       font-weight: bold;
-      color: #fbbf24;
-      margin: 10px 0;
+      margin: 8px 0 15px;
+    }
+    ul.benefit {
+      padding-left: 20px;
+    }
+    ul.benefit li {
+      margin-bottom: 6px;
     }
     .btn {
       display: inline-block;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 8px 16px;
+      background: #238636;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
     }
     .btn:hover {
-      background: #0ea5e9;
+      background: #2ea043;
     }
   </style>
 </head>
 <body>
 
-  <h1>All Produk Ditcii</h1>
+  <h1>🛒Katalog Produk Ditcii🛒</h1>
 
-  <!-- PRODUK UTAMA -->
-  <div class="section">
-    <div class="card">
-      <h2>Produk Utama</h2>
-      <ul>
-        <li>• Script Nika Via WA <a href="payment.html?product=Script-Nika-Via-WA" class="btn">Beli</a></li>
-        <li>• Script Nika Via Tele <a href="payment.html?product=Script-Nika-Via-Tele" class="btn">Beli</a></li>
-        <li>• Script Sasuke Crash Via Tele <a href="payment.html?product=Script-Sasuke-Crash-Via-Tele" class="btn">Beli</a></li>
-        <li>• Script Domain Via WA <a href="payment.html?product=Script-Domain-Via-WA" class="btn">Beli</a></li>
-        <li>• Script Kurapika Via WA <a href="payment.html?product=Script-Kurapika-Via-WA" class="btn">Beli</a></li>
-        <li>• Open Partner <a href="payment.html?product=Open-Partner" class="btn">Beli</a></li>
-        <li>• Open Pembuatan Website <a href="payment.html?product=Open-Pembuatan-Website" class="btn">Beli</a></li>
-        <li>• Open Rename Script <a href="payment.html?product=Open-Rename-Script" class="btn">Beli</a></li>
-        <li>• Murbans <a href="payment.html?product=Murbans" class="btn">Beli</a></li>
-        <li>• Panel 1GB-Unli <a href="payment.html?product=Panel-1GB-Unli" class="btn">Beli</a></li>
-      </ul>
-    </div>
+  <!-- Produk Utama -->
+  <div class="Produk Utama">
+    <h2>Produk Utama</h2>
+    <ul>
+      <li>Script Nika Via WA</li>
+      <li>Script Nika Via Tele</li>
+      <li>Script Sasuke Crash Via Tele</li>
+      <li>Script Domain Via WA</li>
+      <li>Script Kurapika Via WA</li>
+      <li>Open Partner</li>
+      <li>Open Pembuatan Website</li>
+      <li>Open Rename Script</li>
+      <li>Murban</li>
+      <li>Panel 1GB-Unli</li>
+    </ul>
   </div>
 
-  <!-- PRODUK LAINNYA -->
-  <div class="section">
+  <!-- Produk Lainnya -->
+  <div class="Produk Lainnya">
+    <h2>Produk Lainnya</h2>
+
     <div class="card">
-      <h2>Reseller Nika Via Tele</h2>
-      <div class="price">Harga: 60K</div>
-      <ul>
+      <h3>Reseller Nika Via Tele</h3>
+      <div class="harga">Rp 60.000</div>
+      <ul class="benefit">
         <li>Bisa Jualan Script</li>
         <li>Permanen Free Update</li>
         <li>Bebas Jualan</li>
@@ -99,13 +113,13 @@
         <li>Tinggal Terima Script, Tinggal Jualan</li>
         <li>Add Database</li>
       </ul>
-      <a href="payment.html?product=Reseller-Nika-Via-Tele" class="btn">Beli</a>
+      <a href="payment.html?product=reseller-nika-tele" class="btn">Beli Sekarang</a>
     </div>
 
     <div class="card">
-      <h2>Reseller Nika</h2>
-      <div class="price">Harga: 70K</div>
-      <ul>
+      <h3>Reseller Nika</h3>
+      <div class="harga">Rp 70.000</div>
+      <ul class="benefit">
         <li>Bisa Jualan Script</li>
         <li>Permanen Free Update</li>
         <li>Bebas Jualan</li>
@@ -114,13 +128,13 @@
         <li>Tidak Perlu Bayar Lagi Saat Update</li>
         <li>Tinggal Terima Script, Tinggal Jualan</li>
       </ul>
-      <a href="payment.html?product=Reseller-Nika" class="btn">Beli</a>
+      <a href="payment.html?product=reseller-nika" class="btn">Beli Sekarang</a>
     </div>
 
     <div class="card">
-      <h2>Partner Nika</h2>
-      <div class="price">Harga: 120K</div>
-      <ul>
+      <h3>Partner Nika</h3>
+      <div class="harga">Rp 120.000</div>
+      <ul class="benefit">
         <li>Bisa Open Reseller Nika</li>
         <li>Mendapatkan Base Setiap Update</li>
         <li>Admin Di Grup Reseller Nika</li>
@@ -132,13 +146,13 @@
         <li>Tidak Perlu Bayar Lagi Saat Update</li>
         <li>Tinggal Terima Script, Tinggal Jualan</li>
       </ul>
-      <a href="payment.html?product=Partner-Nika" class="btn">Beli</a>
+      <a href="payment.html?product=partner-nika" class="btn">Beli Sekarang</a>
     </div>
 
     <div class="card">
-      <h2>T.Kanan Nika</h2>
-      <div class="price">Harga: 170K</div>
-      <ul>
+      <h3>T.Kanan Nika</h3>
+      <div class="harga">Rp 170.000</div>
+      <ul class="benefit">
         <li>Bisa Open Partner Script</li>
         <li>Mendapatkan No Enc</li>
         <li>Mendapatkan Base Setiap Update</li>
@@ -152,13 +166,13 @@
         <li>Tidak Perlu Bayar Lagi Saat Update</li>
         <li>Tinggal Terima Script, Tinggal Jualan</li>
       </ul>
-      <a href="payment.html?product=T-Kanan-Nika" class="btn">Beli</a>
+      <a href="payment.html?product=tkanan-nika" class="btn">Beli Sekarang</a>
     </div>
 
     <div class="card">
-      <h2>Owner Nika</h2>
-      <div class="price">Harga: 220K</div>
-      <ul>
+      <h3>Owner Nika</h3>
+      <div class="harga">Rp 220.000</div>
+      <ul class="benefit">
         <li>Bisa Open Partner Script</li>
         <li>Mendapatkan No Enc</li>
         <li>Mendapatkan Base Setiap Update</li>
@@ -174,13 +188,13 @@
         <li>Full Akses Source Script</li>
         <li>Prioritas Update Paling Cepat</li>
       </ul>
-      <a href="payment.html?product=Owner-Nika" class="btn">Beli</a>
+      <a href="payment.html?product=owner-nika" class="btn">Beli Sekarang</a>
     </div>
 
     <div class="card">
-      <h2>Reseller Domain</h2>
-      <div class="price">Harga: 70K</div>
-      <ul>
+      <h3>Reseller Domain</h3>
+      <div class="harga">Rp 70.000</div>
+      <ul class="benefit">
         <li>Bisa Jualan Script</li>
         <li>Permanen Free Update</li>
         <li>Bebas Jualan</li>
@@ -189,9 +203,10 @@
         <li>Tidak Perlu Bayar Lagi Saat Update</li>
         <li>Tinggal Terima Script, Tinggal Jualan</li>
       </ul>
-      <a href="payment.html?product=Reseller-Domain" class="btn">Beli</a>
+      <a href="payment.html?product=reseller-domain" class="btn">Beli Sekarang</a>
     </div>
+
   </div>
 
 </body>
-  </html>
+    </html>
