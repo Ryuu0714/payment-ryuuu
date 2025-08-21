@@ -1,166 +1,159 @@
 
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Produk Ditcii</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0a0a0a url('ditcii-bg.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #e0f7ff;
-      padding: 30px;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
     }
-
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
-      z-index: -1;
-    }
-
     h1 {
       text-align: center;
-      font-size: 2.5em;
+      color: #ffcc00;
       margin-bottom: 30px;
-      background: linear-gradient(90deg, #00f2fe, #4facfe);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(0,242,254,0.6);
     }
-
-    .grid {
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
-
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(0, 242, 254, 0.3);
+      background: #1a1a1a;
       border-radius: 15px;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
     }
-
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px #00f2fe, 0 0 40px #4facfe;
+      transform: translateY(-5px);
     }
-
-    .card h2 {
-      font-size: 1.4em;
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
       margin-bottom: 10px;
-      color: #00f2fe;
-      text-shadow: 0 0 10px #4facfe;
+      color: #ffcc00;
     }
-
     .price {
-      font-size: 1.1em;
+      font-size: 1rem;
+      font-weight: bold;
       margin-bottom: 15px;
-      color: #fff;
+      color: #00ffcc;
     }
-
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      color: #00f2fe;
-      border: 1px solid #00f2fe;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.9em;
-      box-shadow: 0 0 10px #00f2fe;
+    ul {
+      padding-left: 20px;
     }
-
-    .button:hover {
-      background: linear-gradient(90deg, #00f2fe, #4facfe);
-      color: #000;
-      box-shadow: 0 0 15px #00f2fe, 0 0 30px #4facfe;
+    ul li {
+      margin-bottom: 8px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
+  <h1>📦 All Produk Ditcii</h1>  <div class="container"><div class="card">
+  <div class="title">▷ BENEFIT RESELLER NIKA</div>
+  <div class="price">💰 Harga: 70K</div>
+  <ul>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+  </ul>
+</div>
 
-  <h1>All Produk Ditcii</h1>
+<div class="card">
+  <div class="title">▷ BENEFIT RESELLER NIKA VIA TELE</div>
+  <div class="price">💰 Harga: 60K</div>
+  <ul>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+    <li>Add Database</li>
+  </ul>
+</div>
 
-  <div class="grid">
+<div class="card">
+  <div class="title">▷ BENEFIT PARTNER NIKA</div>
+  <div class="price">💰 Harga: 120K</div>
+  <ul>
+    <li>Bisa Open Reseller Nika</li>
+    <li>Mendapatkan Base Setiap Update</li>
+    <li>Admin Di Grup Reseller Nika</li>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+  </ul>
+</div>
 
-    <div class="card">
-      <h2>Script Nika</h2>
-      <div class="price">Harga: -</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
+<div class="card">
+  <div class="title">▷ BENEFIT T.KANAN NIKA</div>
+  <div class="price">💰 Harga: 170K</div>
+  <ul>
+    <li>Bisa Open Partner Script</li>
+    <li>Mendapatkan No Enc</li>
+    <li>Mendapatkan Base Setiap Update</li>
+    <li>Bisa Open Reseller Nika</li>
+    <li>Admin Di Grup Reseller Nika</li>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+  </ul>
+</div>
 
-    <div class="card">
-      <h2>Script Domain</h2>
-      <div class="price">Harga: -</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
+<div class="card">
+  <div class="title">▷ BENEFIT OWNER NIKA</div>
+  <div class="price">💰 Harga: 220K</div>
+  <ul>
+    <li>Bisa Open Partner Script</li>
+    <li>Mendapatkan No Enc</li>
+    <li>Mendapatkan Base Setiap Update</li>
+    <li>Bisa Open Reseller Nika</li>
+    <li>Admin Di Grup Reseller Nika</li>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+    <li>Full Akses Source Script</li>
+    <li>Prioritas Update Paling Cepat</li>
+  </ul>
+</div>
 
-    <div class="card">
-      <h2>Script Sasuke</h2>
-      <div class="price">Harga: -</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Script Kurapika</h2>
-      <div class="price">Harga: -</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Reseller Nika</h2>
-      <div class="price">Harga: 70K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Reseller Nika Via Tele</h2>
-      <div class="price">Harga: 60K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Partner Nika</h2>
-      <div class="price">Harga: 120K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>T.Kanan Nika</h2>
-      <div class="price">Harga: 170K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Owner Nika</h2>
-      <div class="price">Harga: 220K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
-
-    <div class="card">
-      <h2>Reseller Domain</h2>
-      <div class="price">Harga: 70K</div>
-      <a href="payment.html" class="button">Beli Sekarang</a>
-    </div>
+<div class="card">
+  <div class="title">▷ BENEFIT RESELLER DOMAIN</div>
+  <div class="price">💰 Harga: 70K</div>
+  <ul>
+    <li>Bisa Jualan Script</li>
+    <li>Permanen Free Update</li>
+    <li>Bebas Jualan</li>
+    <li>Admin Di Grup Buyer</li>
+    <li>Open P.O Sendiri</li>
+    <li>Tidak Perlu Bayar Lagi Saat Update</li>
+    <li>Tinggal Terima Script, Tinggal Jualan</li>
+  </ul>
+</div>
 
   </div>
-
 </body>
-  </html>
+</html>
