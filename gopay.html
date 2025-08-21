@@ -26,6 +26,16 @@
       justify-content: center;
     }
 
+    /* Tambahkan overlay gelap di atas background supaya teks lebih terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
     .box {
       background: rgba(0, 0, 0, 0.7);
       padding: 30px 25px;
